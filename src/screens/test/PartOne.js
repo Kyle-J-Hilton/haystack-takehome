@@ -7,7 +7,13 @@ import images from '../../../assets/images';
 
 const Item = ({ id, title }) => (
     <View style={styles.item}>
-        <MaterialIcons name="post-add" size={24} style={styles.leftIcon} />
+         <Image
+            source={images.code}
+            style={{
+                width: 38,
+                height: 38,
+            }}
+        />
         <View style={styles.textContainer}>
             <Text style={styles.idText}>{id}</Text>
             <Text style={styles.titleText}>{title}</Text>
@@ -52,7 +58,6 @@ const styles = StyleSheet.create({
         padding: 12,
         marginVertical: 8,
         marginHorizontal: 16,
-        backgroundColor: 'white',
     },
     leftIcon: {
         marginRight: 12,
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 14,
-        color: 'grey',
+        color: 'black',
     },
     chevron: {
         marginLeft: 'auto',

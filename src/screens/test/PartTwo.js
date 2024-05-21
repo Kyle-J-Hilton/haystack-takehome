@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, View, SafeAreaView, Text, FlatList, StyleSheet, StatusBar, TextInput } from 'react-native';
+import { ActivityIndicator, View, SafeAreaView, Text, Image, FlatList, StyleSheet, StatusBar, TextInput } from 'react-native';
 import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import hstkFetch from '../../hstkFetch';
+import images from '../../../assets/images';
 
 export default function PartTwo() {
     const [isLoading, setLoading] = useState(true);
@@ -30,7 +31,13 @@ export default function PartTwo() {
 
     const renderItem = ({ item }) => (
         <View style={styles.item}>
-            <MaterialIcons name="post-add" size={24} style={styles.leftIcon} />
+            <Image
+                source={images.code}
+                style={{
+                    width: 38,
+                    height: 38,
+                }}
+            />
             <View style={styles.textContainer}>
                 <Text style={styles.idText}>{item.id}</Text>
                 <Text style={styles.titleText}>{item.title}</Text>
@@ -98,7 +105,7 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 14,
-        color: 'grey',
+        color: 'black',
     },
     chevron: {
         marginLeft: 'auto',

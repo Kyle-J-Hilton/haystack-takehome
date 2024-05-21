@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, View, SafeAreaView, Text, FlatList, StyleSheet, StatusBar, TextInput, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, View, SafeAreaView, Text, Image, FlatList, StyleSheet, StatusBar, TextInput, TouchableOpacity } from 'react-native';
 import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import hstkFetch from '../../hstkFetch';
 import { useNavigation } from '@react-navigation/native';
+import images from '../../../assets/images';
 
 export default function PartThree() {
     const [isLoading, setLoading] = useState(true);
@@ -38,7 +39,13 @@ export default function PartThree() {
             accessibilityHint="View this post and its comments."
             onPress={() => navigation.navigate('part-three-detail', { id: item.id })} 
         >
-            <MaterialIcons name="post-add" size={24} style={styles.leftIcon} />
+            <Image
+                source={images.code}
+                style={{
+                    width: 38,
+                    height: 38,
+                }}
+            />
             <View style={styles.textContainer}>
                 <Text style={styles.idText}>{item.id}</Text>
                 <Text style={styles.titleText}>{item.title}</Text>
@@ -106,7 +113,7 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 14,
-        color: 'grey',
+        color: 'black',
     },
     chevron: {
         marginLeft: 'auto',
@@ -114,6 +121,7 @@ const styles = StyleSheet.create({
     searchInput: {
         height: 40,
         borderColor: 'gray',
+        backgroundColor: '#58586E',
         borderWidth: 1,
         margin: 16,
         paddingLeft: 8,
