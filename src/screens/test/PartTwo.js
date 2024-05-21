@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
     },
     searchInput: {
         height: 40,
-        borderColor: 'gray',
+        borderColor: '#DBDBDB',
+        color: '#DBDBDB',
         borderWidth: 1,
         margin: 16,
         paddingLeft: 8,
@@ -121,6 +122,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 20,
         fontSize: 18,
-        color: 'grey',
+        color: '#DBDBDB',
     },
 });
