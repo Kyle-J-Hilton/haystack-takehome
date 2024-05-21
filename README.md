@@ -1,5 +1,6 @@
 # haystack-takehome
-take home project for haystack interview by kyle hilton
+This is a takehome projected completed by
+Kyle J Hilton
 
 
 ### Setup
