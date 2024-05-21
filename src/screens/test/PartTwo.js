@@ -70,14 +70,21 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: StatusBar.currentHeight || 0,
+        backgroundColor: '#292933',
     },
     item: {
         flexDirection: 'row',
+        borderRadius: 10,
+        justifyContent: 'space-between',
         alignItems: 'center',
+        alignSelf: 'stretch',
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        opacity: 0.95,
         padding: 12,
         marginVertical: 8,
         marginHorizontal: 16,
-        backgroundColor: '#f9c2ff',
+        backgroundColor: 'white',
     },
     leftIcon: {
         marginRight: 12,
